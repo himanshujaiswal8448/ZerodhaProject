@@ -15,7 +15,7 @@ const Summary = ({ username }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/allHoldings")
+      .get("https://zerodha-himans.onrender.com/allHoldings")
       .then((res) => {
         const data = res.data;
         setHoldings(data);

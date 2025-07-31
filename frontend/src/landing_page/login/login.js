@@ -14,14 +14,17 @@ function Login() {
     setMessage("");
 
     try {
-      const res = await fetch("http://localhost:8080/api/user/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        "https://zerodha-himans.onrender.com/api/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(form),
+        }
+      );
 
       const data = await res.json();
 
@@ -43,13 +46,12 @@ function Login() {
 
         setMessage("Login successful, Redirecting you to Kite.");
         setTimeout(() => {
-          // ⬅️ Pass username & email in query
           const params = new URLSearchParams({
             token: data.token,
             username: data.user.username,
             email: data.user.email,
           });
-          window.location.href = `http://localhost:3001?${params.toString()}`;
+          window.location.href = `https://zerodha-himansh.onrender.com/?${params.toString()}`;
         }, 1500);
       } else {
         setMessage(data.message || "Login failed.");

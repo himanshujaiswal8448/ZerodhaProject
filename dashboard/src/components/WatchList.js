@@ -19,7 +19,7 @@ const WatchList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/allHoldings")
+      .get("https://zerodha-himans.onrender.com/allHoldings")
       .then((res) => setWatchlist(res.data))
       .catch((err) => console.error("Error fetching watchlist:", err));
   }, [refreshToggle]);

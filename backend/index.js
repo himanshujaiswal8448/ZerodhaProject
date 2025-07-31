@@ -22,7 +22,10 @@ const PORT = process.env.PORT || 8080;
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: [
+      "https://zerodha-himanshu.onrender.com",
+      "https://zerodha-himansh.onrender.com",
+    ],
     credentials: true,
   })
 );

@@ -6,7 +6,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/allHoldings").then((res) => {
+    axios.get("https://zerodha-himans.onrender.com/allHoldings").then((res) => {
       setAllHoldings(res.data);
     });
   }, []);
@@ -24,7 +24,6 @@ const Holdings = () => {
     ],
   };
 
-  // ✅ Dynamically calculate values
   const totalInvestment = allHoldings.reduce(
     (sum, stock) => sum + stock.avg * stock.qty,
     0

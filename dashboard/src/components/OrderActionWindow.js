@@ -10,7 +10,7 @@ const OrderActionWindow = ({ uid, mode = "BUY" }) => {
 
   const handlePlaceOrder = async () => {
     try {
-      await axios.post("http://localhost:8080/api/order/new", {
+      await axios.post("https://zerodha-himans.onrender.com/api/order/new", {
         name: uid,
         qty: Number(stockQuantity),
         price: Number(stockPrice),

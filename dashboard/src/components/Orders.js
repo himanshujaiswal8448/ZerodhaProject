@@ -6,7 +6,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/order/all")
+      .get("https://zerodha-himans.onrender.com/order/all")
       .then((res) => {
         console.log("Fetched orders:", res.data);
         setOrders(res.data);

@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
 
     if (!token || !auth) {
       setTimeout(() => {
-        window.location.href = "http://localhost:3000/login";
+        window.location.href = "https://zerodha-himanshu.onrender.com/login";
       }, 100);
     } else {
       setIsAuthenticated(true);
