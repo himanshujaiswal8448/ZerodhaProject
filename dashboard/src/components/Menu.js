@@ -24,7 +24,7 @@ const Menu = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("isAuthenticated");
 
-    window.location.href = "https://zerodha-himanshu.onrender.com/login";
+    window.location.href = "https://zerodha-himanshu.onrender.com";
   };
 
   const menuClass = "menu";
