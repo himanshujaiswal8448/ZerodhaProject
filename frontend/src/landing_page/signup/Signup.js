@@ -14,11 +14,14 @@ function Signup() {
     setMessage("");
 
     try {
-      const res = await fetch("http://localhost:8080/api/user/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        "https://zerodha-himans.onrender.com/api/user/signup",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
 
       const data = await res.json();
       setMessage(data.message);
@@ -27,7 +30,7 @@ function Signup() {
         setForm({ username: "", email: "", password: "" });
 
         setTimeout(() => {
-          window.location.href = "http://localhost:3000/login";
+          window.location.href = "https://zerodha-himanshu.onrender.com/login";
         }, 800);
       }
     } catch (err) {
