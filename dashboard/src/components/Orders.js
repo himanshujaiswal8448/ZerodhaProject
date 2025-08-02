@@ -8,7 +8,7 @@ const Orders = () => {
     axios
       .get("https://zerodha-himans.onrender.com/api/order/all")
       .then((res) => {
-        console.log("Fetched orders:", res.data);
+        // console.log("Fetched orders:", res.data);
         setOrders(res.data);
       })
       .catch((err) => {
