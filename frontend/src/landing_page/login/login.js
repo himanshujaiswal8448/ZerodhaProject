@@ -11,7 +11,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage("");
+    setMessage("Please wait for a while if you have login for the first time");
 
     try {
       const res = await fetch(
