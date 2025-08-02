@@ -11,7 +11,7 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage("");
+    setMessage("Please wait for a while");
 
     try {
       const res = await fetch(
